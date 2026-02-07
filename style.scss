@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border_box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    /* Tło główne - różowe serduszka */
+    background-image: url('img/tlo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Zapobiega paskom przewijania przy uciekającym przycisku */
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    position: relative;
+    padding: 20px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* --- STRONA 1 --- */
+
+.title {
+    font-family: 'Pacifico', cursive;
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    transform: rotate(-5deg);
+}
+
+.photo-wrapper {
+    background: white;
+    padding: 10px;
+    border-radius: 20px;
+    display: inline-block;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    margin-bottom: 50px;
+}
+
+.main-photo {
+    max-width: 300px; /* Dostosuj wielkość zdjęcia */
+    border-radius: 15px;
+    display: block;
+}
+
+.dog-img {
+    display: block;
+    margin: -40px auto 20px auto; /* Przesunięcie psa trochę na zdjęcie */
+    width: 100px;
+    position: relative;
+    z-index: 2;
+}
+
+.buttons-panel {
+    background: white;
+    border-radius: 50px;
+    padding: 20px 40px;
+    display: inline-flex;
+    gap: 40px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    position: relative; /* Ważne dla uciekającego przycisku */
+    min-width: 300px;
+    justify-content: center;
+}
+
+.btn {
+    padding: 15px 40px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.btn-green {
+    background-color: #5cdb5c;
+    box-shadow: 0 5px 0 #45a045;
+}
+
+.btn-green:active {
+    transform: translateY(4px);
+    box-shadow: 0 1px 0 #45a045;
+}
+
+.btn-red {
+    background-color: #ff4d4d;
+    box-shadow: 0 5px 0 #cc0000;
+    position: relative; /* Aby móc nim ruszać */
+}
+
+/* --- STRONA 2 --- */
+
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Żeby na telefonie układało się jedno pod drugim */
+}
+
+.left-side {
+    text-align: center;
+}
+
+.gif-container img {
+    border: 5px solid #ff9bd2; /* Fioletowa ramka jak na projekcie */
+    border-radius: 10px;
+    max-width: 250px;
+}
+
+.ura-text {
+    background-color: #ff3b3b;
+    color: white;
+    font-family: 'Pacifico', cursive; /* Ozdobna czcionka */
+    font-size: 2.5rem;
+    padding: 10px 30px;
+    border-radius: 15px;
+    margin-top: 20px;
+    display: inline-block;
+    box-shadow: 0 5px 15px rgba(255, 59, 59, 0.4);
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: center;
+    max-width: 400px;
+    position: relative;
+}
+
+/* Różowe serce w tle karty (efekt rozmycia) */
+.card::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(255,182,193,0.8) 0%, rgba(255,255,255,0) 70%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.card h2 {
+    color: #b22222;
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+    position: relative;
+    z-index: 1;
+}
+
+.info-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+    text-align: left;
+}
+
+.icon {
+    font-size: 2rem;
+    margin-right: 20px;
+    width: 40px;
+    text-align: center;
+    color: #333;
+}
+
+.text h3 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: black;
+}
+
+.text p {
+    color: #d63346;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.footer-text {
+    margin-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+    color: #d63346;
+    font-size: 0.9rem;
+}

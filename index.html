@@ -1,12 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walentynki</title>
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+
+    <div class="container" id="page-1">
+        
+        <h1 class="title">Zostaniesz moją <br> Walentynką?</h1>
+
+        <div class="photo-wrapper">
+            <img src="img/photo_2026-02-07_14-27-32.jpg" alt="Nasze zdjęcie" class="main-photo">
+        </div>
+
+        <img src="img/pies.svg" alt="Piesek" class="dog-img">
+
+        <div class="buttons-panel">
+            <button id="btn-yes" class="btn btn-green">TAK</button>
+            <button id="btn-no" class="btn btn-red">NIE</button>
+        </div>
+    </div>
+
+    <div class="container hidden" id="page-2">
+        <div class="content-wrapper">
+            
+            <div class="left-side">
+                <div class="gif-container">
+                    <img src="img/gif.gif" alt="Minionek">
+                </div>
+                <div class="ura-text">УРААА!</div>
+            </div>
+
+            <div class="card">
+                <h2>ZAPROSZENIE NA RANDKĘ</h2>
+                
+                <div class="info-row">
+                    <div class="icon"><i class="fa-regular fa-clock"></i></div>
+                    <div class="text">
+                        <h3>KIEDY?</h3>
+                        <p>14 LUTEGO</p>
+                    </div>
+                </div>
+
+                <div class="info-row">
+                    <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="text">
+                        <h3>GDZIE?</h3>
+                        <p>KOKO SUSHI (LUB INNA)</p>
+                    </div>
+                </div>
+
+                <div class="info-row">
+                    <div class="icon"><i class="fa-solid fa-shirt"></i></div> <div class="text">
+                        <h3>DRESSCODE</h3>
+                        <p>SUKIENKA I UŚMIECH</p>
+                    </div>
+                </div>
+
+                <div class="footer-text">HAPPY VALENTINE'S DAY</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
